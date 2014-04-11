@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<title>MAB Portal Prototype</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Cache-Control" content="no-store" />
+		<meta http-equiv="Pragma" content="no-store" />
+  		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="scripts/modernizr.custom.js"></script>
+		<script src="scripts/plugin/jquery.wookie.js" type="text/javascript"></script>
+		<script src="scripts/plugin/jquery.cycle2.min.js" type="text/javascript"></script>
+		<script src="scripts/plugin/jquery.results.js" type="text/javascript"></script>
+		<script src="scripts/common.js" type="text/javascript"></script>
+		<script src="scripts/notices.js" type="text/javascript"></script>
+		<script src="scripts/locations.js" type="text/javascript"></script>
+		<script src="scripts/home.js" type="text/javascript"></script>
+		<link href="styles/reset.css" rel="stylesheet" type="text/css" />
+		<link href="styles/general2.css" rel="stylesheet" type="text/css" />
+		<link href="styles/selfserve.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>		
+		<form id="mainForm">
+			<div id="wrapper">
+				<div id="pageContainer">
+					<header id="pageHeader">
+						<div id="pageImage">
+							<div id="account">
+								<p>
+									(not logged in)
+								</p>
+								<a href="login.html">Login</a>
+							</div>
+						</div>
+					</header>
+					<nav id="nav">
+						<ul>
+							<li>
+								<a href="home.html" class="home"></a>
+							</li>
+							<li>
+								<a href="documents.html">Documents</a>
+							</li>
+							<li>
+								<a href="myworkorders.html">My Work Orders</a>
+							</li>
+							<li>
+								<a href="selfserve.html">Self Service</a>
+							</li>
+							<li>
+								<a href="feedback.html">Feedback</a>
+							</li>
+							<li>
+								<a href="ppm.html">PPM Calendar</a>
+							</li>
+						</ul>
+					</nav>
+					<div id="page">
+						<div id="myLocationBar">
+							<fieldset>
+								<label for="myLocation">My Location</label>
+								<input type="hidden" id="myLocationId" value="" />
+								<input type="text" id="myLocation" class="readonly" readonly="readonly" value="" />
+								<input type="text" id="locationSearch" class="autoDisable notShown" value="" />
+								<a href="#" title="Search" class="search notShown"></a>
+								<a href="#" title="Change Location" class="button2 switch">Change Location</a>
+								<a href="#" title="Cancel" class="button2 cancel notShown">Cancel</a>
+								<label id="rememberLabel" for="rememberLocation" class="remember notShown">Remember My Location</label>
+								<input type="checkbox" id="rememberLocation" class="remember notShown" />
+							</fieldset>
+							<div class="clear"></div>
+						</div>
+						<div id="myLocationSearchResult" class="searchResults notShown">
+							<div id="myLocationSearchMessages" class="messages notShown clickable"></div>
+							<div class="busy">
+								<img src="images/busy.gif" />
+								<p>
+									Searching Locations...
+								</p>
+							</div>
+							<div class="summaryOuter">
+								<div class="summary"></div>
+								<div class="navigation">
+									<a href="#" title="Go to the first page" class="button3 firstPage backward"></a>
+									<a href="#" title="Go to the previous page" class="button3 previousPage backward"></a>
+									<a href="#" title="Go to the next page" class="button3 nextPage forward"></a>
+									<a href="#" title="Go to the last page" class="button3 lastPage forward"></a>
+								</div>
+							</div>
+							<table class="results">
+								<thead>
+									<tr>
+										<th>Action</th>
+										<th>Description</th>
+										<th>Location</th>
+										<th>Postcode</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+							<div class="clear"></div>
+						</div>	
+						<div class="rightColumn">
+							<div id="notices" class="section side">
+								<h2>Notices</h2>
+								<div class="paused notShown">paused</div>
+								<div class="clear"></div>
+								<div id="noticesBusy" class="notShown">
+									<img src="images/busy.gif" />
+									<p>Searching notices...</p>
+								</div>
+								<div id="noticeContainer" class="notShown" 
+                                	 data-cycle-fx="scrollHorz" 
+                                 	 data-cycle-timeout="8000"
+                                 	 data-cycle-pause-on-hover="true"
+                                 	 data-cycle-slides="> div">
+								</div>
+								<p class="notShown"></p>
+								<input type="button" title="Go to the next page" class="button3 nextPage notShown" />
+								<input type="button" title="Go to the previous page" class="button3 previousPage notShown" />
+							</div>						
+							<div class="section side">
+								<h2>New Order</h2>
+								<ul class="quickOrders">
+									<li class="form">
+										<a href="selfserve.html">Start New Order</a>
+									</li>
+								</ul>
+								<p>
+									Please do not log any work that has a Health and Safety implication or impacts trade.
+									These works should be called through to the Help Desk:
+								</p>
+								<ul>
+									<li>Bank, Corporate and Funeralcare 0845 850 0068</li>
+									<li>Healthcare 0845 456 6789 (option 3)</li>
+									<li>Food 0844 262 2001 (option 3)</li>
+								</ul>								
+							</div>						
+							<div class="section side">
+								<h2>Quick Orders</h2>
+								<p>Orders can be quickly raised for the current location.</p>
+								<div id="quickOrderMessages" class="messages notShown clickable"></div>
+								<ul id="quickOrders" class="quickOrders">
+									<li class="clean">
+										<a href="#">Missed Clean</a>
+									</li>
+								</ul>								
+							</div>
+						</div>
+						<div class="leftColumn">
+							<div class="switchedLocationEvent locationNotSetHelp">
+								<p>
+									Please select your location by clicking on the Change Location button and typing your location into the search field.
+								</p>
+								<p>
+									If you wish the portal to remember your location each time you log-in check the 'Remember My Location' box before selecting your location from the list provided.
+								</p>
+								<p>
+									When you have selected your location you will be presented with a list of open orders for your site.
+								</p>
+							</div>
+							<div id="openOrders" class="section notShown">
+								<h2>My Location Orders</h2>
+								<p>
+									Please switch to a location to list the work orders against that Location.<!--These are the Work Orders against Location-->"
+								</p>
+								<div id="locationOrders" class="searchResults switchedLocationEvent notShown">
+									<div class="busy">
+										<img src="images/busy.gif" />
+										<p>Finding current Location Work Orders</p>
+									</div>
+									<div class="messages notShown clickable"></div>	
+									<div class="summaryOuter">
+										<div class="summary"></div>					
+										<div class="navigation">
+											<select class="perPage" size="1">
+												<option value="10">10 per page</option>
+												<option value="20">20 per page</option>
+												<option value="30">30 per page</option>
+											</select>
+											<a href="#" title="Go to the first page" class="button3 firstPage backward"></a>
+											<a href="#" title="Go to the previous page" class="button3 previousPage backward"></a>
+											<a href="#" title="Go to the next page" class="button3 nextPage forward"></a>
+											<a href="#" title="Go to the last page" class="button3 lastPage forward"></a>
+										</div>
+									</div>					
+									<table class="results">
+										<thead>
+											<tr>
+												<th>Action</th>
+												<th>Description</th>
+												<th>Location</th>
+												<th>Postcode</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+									<div class="clear"></div>
+								</div>			
+							</div>								
+						</div>						
+						<div class="clear"></div>						
+					</div>
+					<footer id="footer">
+						<ul>
+							<li>
+								<a href="contact.html">Contact Us</a>
+							</li>			
+							<li>
+								<a href="help.html">Help</a>
+							</li>			
+						</ul>
+					</footer>
+				</div>
+			</div>
+		</form>		
+	</body>
+</html>

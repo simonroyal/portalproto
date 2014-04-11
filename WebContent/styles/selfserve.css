@@ -1,0 +1,149 @@
+/* Quick Orders */
+
+ul.quickOrders
+{
+	list-style: none;
+	margin: 0;
+	text-align: center;
+}
+
+ul.quickOrders div.busy
+{
+	background-color: inherit;
+	position: relative;
+}
+
+ul.quickOrders li
+{
+	width: 112px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+ul.quickOrders li a
+{
+	display: block;
+	height: 20px;
+	padding: 90px 6px 0 6px;
+	background-image: url("../images/selfserve/categories.png");
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+ul.quickOrders li.fan  a               { background-position:  0px   0px;    }
+ul.quickOrders li.fan  a:hover         { background-position: -112px 0px;    }
+
+ul.quickOrders li.tap  a               { background-position:  0px   -146px; }
+ul.quickOrders li.tap  a:hover         { background-position: -112px -146px; }
+
+ul.quickOrders li.food  a              { background-position:  0px   -292px; }
+ul.quickOrders li.food  a:hover        { background-position: -112px -292px; }
+
+ul.quickOrders li.clean  a             { background-position:  0px   -438px; }
+ul.quickOrders li.clean  a:hover       { background-position: -112px -438px; }
+
+ul.quickOrders li.dislike  a           { background-position:  0px   -584px; }
+ul.quickOrders li.dislike  a:hover     { background-position: -112px -584px; }
+
+ul.quickOrders li.general  a           { background-position:  0px   -730px; }
+ul.quickOrders li.general  a:hover     { background-position: -112px -730px; }
+
+ul.quickOrders li.garden  a            { background-position:  0px   -876px; }
+ul.quickOrders li.garden  a:hover      { background-position: -112px -876px; }
+
+ul.quickOrders li.mail  a              { background-position:  0px   -1022px; }
+ul.quickOrders li.mail  a:hover        { background-position: -112px -1022px; }
+
+ul.quickOrders li.bug  a               { background-position:  0px   -1168px; }
+ul.quickOrders li.bug  a:hover         { background-position: -112px -1168px; }
+
+ul.quickOrders li.porter  a            { background-position:  0px   -1314px; }
+ul.quickOrders li.porter  a:hover      { background-position: -112px -1314px; }
+
+ul.quickOrders li.reception a          { background-position:  0px   -1460px; }
+ul.quickOrders li.reception a:hover    { background-position: -112px -1460px; }
+
+ul.quickOrders li.form a          { background-position:  0px   -1606px; }
+ul.quickOrders li.form a:hover    { background-position: -112px -1606px; }
+
+ul.quickOrders li.padlock a        { background-position:  0px   -1752px; }
+ul.quickOrders li.padlock a:hover  { background-position: -112px -1752px; }
+
+ul.quickOrders li.bin a        { background-position:  0px   -1898px; }
+ul.quickOrders li.bin a:hover  { background-position: -112px -1898px; }
+
+
+/* Self service problem type auto complete */
+
+.ui-autocomplete
+{
+	max-height: 140px;
+	max-width: 540px;
+	overflow-y: auto;
+}
+
+
+/* Log note type column */
+
+table.results th.logNoteType
+{
+	width: 120px;
+}
+
+
+
+div.ordersNavigation p.summary
+{
+	float: left;
+}
+
+div.ordersNavigation div.navigation
+{
+	float: right;
+	margin-bottom: 30px;
+}
+
+div.ordersNavigation div.navigation a
+{
+	float: right;
+	margin: 0 15px 0 0;
+}
+
+div.ordersNavigation a.back
+{
+	padding: 0 5px 0 20px;	
+}
+
+dl.woDetails
+{
+	overflow: auto;
+}
+
+dl.woDetails dt
+{
+	display: block;
+	font-weight: bold;
+	width: 140px;
+	float: left;
+	clear: left;
+	margin-bottom: 1em;
+}
+
+dl.woDetails dd
+{
+	display: block;
+	float: left;
+	clear: right;
+	margin-bottom: 1em;
+	width: 500px;
+}
+
+dl.woDetails table
+{
+	font-size: 0.9em;
+}
+
+#woLogNotes
+{
+	min-height: 50px;
+}

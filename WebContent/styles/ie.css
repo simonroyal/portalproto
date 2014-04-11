@@ -1,0 +1,272 @@
+/*
+IE hacks used:
+
+All IE        - color: green;
+IE8 and below - color: green\9;
+IE7 and below - *color: green;
+IE6 and below - _color: green;
+*/
+
+/* Enable the hover selector for other elements (other than a) in IE6 */
+
+body
+{
+	_behavior:url("/helpdeskonline/scripts/csshover3.htc");
+}
+
+#pageContainer
+{
+	overflow: hidden\9;
+}
+
+/* IE6 layout problems */
+
+#page, #footer
+{
+	_height: 1%;
+}
+
+/* Enable rounded corners in IE7 and IE8, but not in IE6 */
+
+#footer
+{
+	border-radius: 0 0 8px 8px\9;
+	behavior: url("/helpdeskonline/scripts/pie/PIE.htc")\9;
+	_border-radius: 0;
+	_behavior: none;
+}
+
+/* Footer text colour cannot be inherited below IE8 */
+
+#footer a
+{
+	*color: #000;
+}
+
+/* Table header and footer */
+
+table thead th, table tfoot th
+{
+	*border-top: 1px solid #333;
+	*border-bottom: 1px solid #333;
+}
+
+/* IE7 button background fix */
+
+input[type=submit], input[type=button]
+{
+	*background-color: #00f;
+}
+
+/* IE6 button background fix */
+
+input.button1, input.button2, input.button3, input.search
+{
+	_background-color: #000;
+}
+
+/*
+ IE6 CSS selectors do not work for radio and checkbox so jquery adds
+ these classes. 
+ */
+
+fieldset input.radio, fieldset input.checkbox
+{
+	_width: auto !important;
+	_border: none;
+}
+
+/* Buttons padding for IE6 */
+
+fieldset.buttons
+{
+	_padding-left: 160px;
+}
+
+/* Position problems in IE6 */
+
+fieldset div.help
+{
+	_right: 30px;
+}
+
+/* Read only CSS not correctly being applied in IE6 */
+
+fieldset input.readonly, fieldset select.readonly, fieldset textarea.readonly
+{
+	_background-color: #eee;
+	_border: 1px solid #ccc;
+}
+
+/* Disable buttons and links in IE8 or below */
+
+input.disabled, a.disabled
+{
+	filter: alpha(opacity=30)\9 !important;
+	cursor: text !important\9;
+}
+
+/* Opacity is not available until IE9 */
+
+div.searchResults div.busy
+{
+	filter: alpha(opacity=95)\9;
+}
+
+/* My locations */
+
+#myLocationBar
+{
+	*height: 1%;
+}
+
+#myLocationBar input.remember
+{
+	margin-top: 6px;
+}
+
+/* IE6 selector attribute work around */
+
+#myLocationBar input.typeText
+{
+	_width: 40%;
+	_margin-top: 4px;
+	_margin-bottom: 4px;
+}
+
+#myLocationBar a.switch
+{
+	*margin-bottom: 3px;
+	_margin-bottom: 5px;
+}
+
+/* Notices layout fix */
+
+#notices
+{
+	*position: relative;
+}
+
+#notices h2
+{
+	*float: none;
+}
+
+#notices div.paused
+{
+	*position: absolute;
+	*top: 20px;
+	*right: 5px;
+}
+
+
+
+/* Style for pointer cursor */
+
+.pointer
+{
+	cursor: pointer\9;
+}
+
+/* IE warning */
+
+#ieWarning
+{
+	border: 4px solid #ffeb00;
+	background-color: #fdfd97;
+	margin-bottom: 1em;
+	padding: 1em;
+	display: block;
+}
+
+#ieWarning h2
+{
+	float: left;
+}
+
+#ieWarning label, #ieWarning input, #ieWarning a
+{
+	float: right;
+}
+
+#ieWarning p
+{
+	clear: both;
+}
+
+#ieWarning a
+{
+	margin-left: 1em;
+}
+
+#ieWarning input
+{
+	margin-left: 0.5em;
+}
+
+/* Work order details */
+
+dl.woDetails dd
+{
+	*float: none;
+}
+
+/* IE6 and IE7 layout bugs (content disappearing) */
+
+div.tab
+{
+	*min-height: 1%;
+	*overflow: auto;
+}
+
+div.searchResults, div.searchResults div.summaryOuter, , div.searchResults div.summary, , div.searchResults div.navigation, table.results
+{
+	*min-height: 1%;
+	*overflow: auto;
+}
+
+/* Switch from png to gif for IE6 */
+
+ul.quickOrders li a
+{
+	_background-image: url("../images/selfserve/categories.gif");
+}
+
+#nav a.home
+{
+	_background-image: url("../images/icons/home.gif");
+}
+
+a.search
+{
+	_background-image: url("../images/icons/icons.gif");
+}
+
+input.button1, input.button2, input.button3, a.button1, a.button2, a.button3
+{
+	_background-image: url("../images/buttons.gif");
+}
+
+/* IE6 problems with the tabs */
+
+div.tabs ul
+{
+	_border-bottom: none;
+}
+
+div.tabs ul li
+{
+	_width: 100px;
+}
+
+div.tabs a
+{
+	_border-bottom: 1px solid #ced3d8;
+}
+
+/* IE6 not setting width correctly */
+
+textarea
+{
+	_width: 400px;
+}

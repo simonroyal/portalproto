@@ -1,0 +1,23 @@
+html, body
+{
+	color: #000;
+	margin: 0;
+	padding: 0;	
+}
+
+h1,h2,h3,h4,h5,p,ul,div,li,a,img,fieldset,th,td,input,span,select,textarea
+{
+	margin: 0;
+	padding: 0;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;	
+}
+
+img
+{
+	border-width: 0px;	
+}

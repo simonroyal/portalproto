@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<title>MAB Portal Prototype</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Cache-Control" content="no-store" />
+		<meta http-equiv="Pragma" content="no-store" />
+  		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="scripts/modernizr.custom.js"></script>
+		<script src="scripts/plugin/jquery.wookie.js" type="text/javascript"></script>
+		<script src="scripts/plugin/jquery.cycle2.min.js" type="text/javascript"></script>
+		<script src="scripts/plugin/jquery.results.js" type="text/javascript"></script>
+		<script src="scripts/common.js" type="text/javascript"></script>
+		<script src="scripts/locations.js" type="text/javascript"></script>
+		<script src="scripts/documents.js" type="text/javascript"></script>
+		<link href="styles/reset.css" rel="stylesheet" type="text/css" />
+		<link href="styles/general2.css" rel="stylesheet" type="text/css" />
+		<link href="styles/siteuser.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>		
+		<form id="mainForm">
+			<div id="wrapper">
+				<div id="pageContainer">
+					<header id="pageHeader">
+						<div id="pageImage">
+							<div id="account">
+								<p>
+									(not logged in)
+								</p>
+								<a href="login.html">Login</a>
+							</div>
+						</div>
+					</header>
+					<nav id="nav">
+						<ul>
+							<li>
+								<a href="home.html" class="home"></a>
+							</li>
+							<li>
+								<a href="documents.html">Documents</a>
+							</li>
+							<li>
+								<a href="myworkorders.html">My Work Orders</a>
+							</li>
+							<li>
+								<a href="selfserve.html">Self Service</a>
+							</li>
+							<li>
+								<a href="feedback.html">Feedback</a>
+							</li>
+							<li>
+								<a href="ppm.html">PPM Calendar</a>
+							</li>
+						</ul>
+					</nav>
+					<div id="page">
+						<div id="breadcrumb">
+							<ul>
+								<li><a href="home.html">Home</a></li>
+								<li class="sepatator">&gt;</li>
+								<li>Documents</li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+						<div id="myLocationBar">
+							<fieldset>
+								<label for="myLocation">My Location</label>
+								<input type="hidden" id="myLocationId" value="" />
+								<input type="text" id="myLocation" class="readonly" readonly="readonly" value="" />
+								<input type="text" id="locationSearch" class="autoDisable notShown" value="" />
+								<a href="#" title="Search" class="search notShown"></a>
+								<a href="#" title="Change Location" class="button2 switch">Change Location</a>
+								<a href="#" title="Cancel" class="button2 cancel notShown">Cancel</a>
+								<label id="rememberLabel" for="rememberLocation" class="remember notShown">Remember My Location</label>
+								<input type="checkbox" id="rememberLocation" class="remember notShown" />
+							</fieldset>
+							<div class="clear"></div>
+						</div>
+						<div id="myLocationSearchResult" class="searchResults notShown">
+							<div id="myLocationSearchMessages" class="messages notShown clickable"></div>
+							<div class="busy">
+								<img src="images/busy.gif" />
+								<p>
+									Searching Locations...
+								</p>
+							</div>
+							<div class="summaryOuter">
+								<div class="summary"></div>
+								<div class="navigation">
+									<a href="#" title="Go to the first page" class="button3 firstPage backward"></a>
+									<a href="#" title="Go to the previous page" class="button3 previousPage backward"></a>
+									<a href="#" title="Go to the next page" class="button3 nextPage forward"></a>
+									<a href="#" title="Go to the last page" class="button3 lastPage forward"></a>
+								</div>
+							</div>
+							<table class="results">
+								<thead>
+									<tr>
+										<th>Action</th>
+										<th>Description</th>
+										<th>Location</th>
+										<th>Postcode</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+							<div class="clear"></div>
+						</div>	
+						<div class="rightColumn">
+							<div class="section side">
+								<h2>Document Search</h2>
+								<fieldset class="narrow">
+									<label></label>
+									<input type="text" class="autoDisable hasSearch" />
+									<a href="#" title="Search documents" class="search"></a>
+								</fieldset>
+								<div class="messages clickable notShown"></div>
+							</div>						
+						</div>
+						<div class="leftColumn">
+							<div class="section main">
+								<h1>Documents</h1>
+								<div class="tabs">
+									<ul>
+										<li class="selected"><a href="#">Site Documents</a></li>
+										<li><a href="#">Certificates</a></li>
+									</ul>
+								</div>
+								<div class="tab">
+									<p>Found 20 files.</p>
+									<ul class="folders">
+										<li>
+											<a href="#">Folder 1</a>
+											<div class="files notShown">
+												<table class="results">
+													<thead>
+														<tr>
+															<th></th>
+															<th>File</th>
+															<th>Description</th>
+															<th class="date">Created On</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td></td>
+															<td><a href="#">File1.jpg</a></td>
+															<td>Description of file 1</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File2.pdf</a></td>
+															<td>Description of file 2</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File3.docx</a></td>
+															<td>Description of file 3</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</li>
+										<li>
+											<a href="#">Folder 2</a>
+											<div class="files notShown">
+												<table class="results">
+													<thead>
+														<tr>
+															<th></th>
+															<th>File</th>
+															<th>Description</th>
+															<th class="date">Created On</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td></td>
+															<td><a href="#">File4.jpg</a></td>
+															<td>Description of file 4</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File5.pdf</a></td>
+															<td>Description of file 5</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File6.docx</a></td>
+															<td>Description of file 6</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File7.docx</a></td>
+															<td>Description of file 7</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File8.docx</a></td>
+															<td>Description of file 8</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File9.docx</a></td>
+															<td>Description of file 9</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File10.docx</a></td>
+															<td>Description of file 10</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File11.docx</a></td>
+															<td>Description of file 11</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</li>
+										<li>
+											<a href="#">Folder 3</a>
+											<div class="files notShown">
+												<table class="results">
+													<thead>
+														<tr>
+															<th></th>
+															<th>File</th>
+															<th>Description</th>
+															<th class="date">Created On</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td></td>
+															<td><a href="#">File12.jpg</a></td>
+															<td>Description of file 12</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File13.pdf</a></td>
+															<td>Description of file 13</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File14.docx</a></td>
+															<td>Description of file 14</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File15.docx</a></td>
+															<td>Description of file 15</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</li>
+										<li>
+											<a href="#">Folder 4</a>
+											<div class="files notShown">
+												<table class="results">
+													<thead>
+														<tr>
+															<th></th>
+															<th>File</th>
+															<th>Description</th>
+															<th class="date">Created On</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td></td>
+															<td><a href="#">File16.jpg</a></td>
+															<td>Description of file 16</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File17.pdf</a></td>
+															<td>Description of file 17</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File18.docx</a></td>
+															<td>Description of file 18</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File19.docx</a></td>
+															<td>Description of file 19</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td><a href="#">File20.docx</a></td>
+															<td>Description of file 20</td>
+															<td>01/01/2014 01:01</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="tab notShown">
+								</div>
+							</div>								
+						</div>						
+						<div class="clear"></div>						
+					</div>
+					<footer id="footer">
+						<ul>
+							<li>
+								<a href="contact.html">Contact Us</a>
+							</li>			
+							<li>
+								<a href="help.html">Help</a>
+							</li>			
+						</ul>
+					</footer>
+				</div>
+			</div>
+		</form>		
+	</body>
+</html>

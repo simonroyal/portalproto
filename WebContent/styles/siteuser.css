@@ -1,0 +1,165 @@
+/* Documents and Folders */
+
+div.documents
+{
+	position: relative;
+	min-height: 50px;
+}
+
+ul.folders
+{
+	list-style: none;
+	margin: 0;
+}
+
+ul.folders li > a
+{
+	background: url("../images/folders.png") no-repeat;
+	background-position: 0 0;
+	height: 32px;
+	display: block;
+	line-height: 32px;
+	padding: 0 0 0 36px;
+}
+
+ul.folders li > a.expanded
+{
+	background-position: 0 -32px;
+}
+
+ul.folders div.files
+{
+	margin-left: 50px;
+}
+
+
+/* PPM Calendar */
+
+#ppmCalendar
+{
+	position: relative;
+}
+/*
+#ppmCalendar div.busy
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 5000;
+	background-color: #fff;
+	text-align: center;
+	opacity: 0.9;
+	top: 0px;
+	left: 0px;
+}
+*/
+#ppmCalendar table.legend
+{
+	margin: 0 0 15px 0;
+	font-size: 0.85em;
+}
+
+#ppmCalendar table.legend td.status
+{
+	width: 45px;
+}
+
+table.ppmCalendar
+{
+	border-spacing: 1px;
+	border-collapse: separate;
+	background: url("../images/623321_white-box-grad.jpg") left bottom repeat-x scroll;
+	border: 1px solid black;
+	width: 100%;
+	clear: both;
+	float: none;
+	font-size: 0.85em;
+}
+
+table.ppmCalendar th.month
+{
+	padding: 2px;
+	text-align: center;
+	width: 53px;
+}
+
+table.ppmCalendar td.month
+{
+	padding: 2px;
+}
+
+table.ppmCalendar td.s0, #ppmCalendar table.legend td.s0
+{
+	background-color: #9bc7db;
+}
+
+table.ppmCalendar td.s1, #ppmCalendar table.legend td.s1
+{
+	background-color: #16c031;
+}
+
+table.ppmCalendar td.s2, #ppmCalendar table.legend td.s2
+{
+	background-color: #ffe205;
+}
+
+table.ppmCalendar td.s3, #ppmCalendar table.legend td.s3
+{
+	background-color: #718bcf;
+}
+
+table.ppmCalendar td.s4, #ppmCalendar table.legend td.s4
+{
+	background-color: #f00;
+}
+
+table.ppmCalendar td.sm, #ppmCalendar table.legend td.sm
+{
+	background-color: #970505;
+}
+
+table.ppmCalendar td.pmDescription
+{
+	width: 100px;
+}
+
+table.ppmCalendar td.hasData
+{
+	text-align: center;
+}
+
+
+/* Compliance View */
+
+#complianceView
+{
+	overflow: auto;
+	position: relative;
+}
+
+/*
+#complianceView div.busy
+{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 5000;
+	background-color: #fff;
+	text-align: center;
+	opacity: 0.9;
+}
+*/
+#complianceView div.chart
+{
+	width: 500px;
+	height: 400px;
+	float: left;
+	margin-bottom: 15px;
+}
+
+#complianceView div.options
+{
+	float: right;
+}
